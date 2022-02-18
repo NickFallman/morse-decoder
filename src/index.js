@@ -42,8 +42,12 @@ const result = "hello world";
 
 function decode(expr) {
   // write your solution here
-  // 0010101010
-  
+  let bufArr = toChunks10(expr);
+  for(let i = 0; i < bufArr.length; i++) {
+    bufArr[i] = chunkToMcode(bufArr[i]);
+  }
+  const outStr = mCodeToText(bufArr);
+  return outStr;
 }
 
 const toChunks10 = data => {
