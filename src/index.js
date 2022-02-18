@@ -84,6 +84,17 @@ for(let i = 0; i < res.length; i++) {
 }
 console.log(res);
 
+const mCodeToText = inMcodeArr => {
+  let outStr = '';
+  // let outArr = [];
+  outStr = inMcodeArr.map(elm => elm === '**********' ? ' ' : MORSE_TABLE[elm]).join('');
+  // console.log(outStr);
+  return outStr;
+}
+
+res = mCodeToText(res);
+console.log(res);
+
 /* 
 module.exports = {
     decode
