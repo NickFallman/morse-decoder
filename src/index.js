@@ -37,8 +37,8 @@ const MORSE_TABLE = {
     '-----':  '0',
 };
 
-const expr = "00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010";
-const result = "hello world";
+// const expr = "00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010";
+// const result = "hello world";
 
 function decode(expr) {
   // write your solution here
@@ -60,8 +60,8 @@ const toChunks10 = data => {
   return chunks10;
 };
 
-let res = toChunks10(expr);
-console.log(res);
+// let res = toChunks10(expr);
+// console.log(res);
 
 const chunkToMcode = chunk10 => {
   let inStr = chunk10;
@@ -78,15 +78,15 @@ const chunkToMcode = chunk10 => {
   const subStrDash = '11'
   while (inStr.includes(subStrDash)) {
     inStr = inStr.replace(subStrDash, '-');
-    console.log(subStrDash, inStr); 
+    // console.log(subStrDash, inStr); 
   }
   return inStr;
 };
 
-for(let i = 0; i < res.length; i++) {
-  res[i] = chunkToMcode(res[i]);
-}
-console.log(res);
+// for(let i = 0; i < res.length; i++) {
+//   res[i] = chunkToMcode(res[i]);
+// }
+// console.log(res);
 
 const mCodeToText = inMcodeArr => {
   let outStr = '';
@@ -96,11 +96,9 @@ const mCodeToText = inMcodeArr => {
   return outStr;
 }
 
-res = mCodeToText(res);
-console.log(res);
+// res = mCodeToText(res);
+// console.log(res);
 
-/* 
 module.exports = {
     decode
 }
- */
