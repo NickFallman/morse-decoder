@@ -37,10 +37,30 @@ const MORSE_TABLE = {
     '-----':  '0',
 };
 
+const expr = "00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010";
+const result = "hello world";
+
 function decode(expr) {
-    // write your solution here
+  // write your solution here
+  // 0010101010
+  
 }
 
+const toChunks10 = data => {
+  const chunks10 = [];
+  console.log(data, data.length);
+  for (let i = 0; i < data.length; i += 10) {
+    console.log(chunks10);
+    chunks10.push(data.slice(i, i + 10));
+  }
+  return chunks10;
+};
+
+res = toChunks10(expr);
+console.log();
+
+/* 
 module.exports = {
     decode
 }
+ */
